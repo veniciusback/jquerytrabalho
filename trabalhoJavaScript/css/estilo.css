@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.topo {
+    height: 185px;
+    width: auto;
+    background-color: black;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+ul{
+    width: auto; /* Tamanho da lista principal */
+    display: flex;
+    justify-content: center;
+    list-style: none;        
+}
+ul li{
+    float: left;
+    background-color: #FFFFFF;
+    position: relative; /* Necessário para o item filho se posicionar a LI que é o pai */
+}
+ul li ul{
+    display: none;
+    position: absolute;
+}
+
+ul li a{
+    display: block;
+    padding: 20px;
+    border: 1px #FFFFFF solid;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000000;
+}
+ul li:hover > a{ /* Quando passarmos o mouse sobre a LI colocamos estilo no A */
+    background-color: #0099FF;
+    color: #FFFFFF;
+}
+
+ul li:hover ul{ /* Quando passar o mouse sobre a LI aparecerá o menu filho */
+    width: 180px; /* Tamanho do menu filho */
+    display: block; 
+
+}
+ul li ul li{
+    width: 180px;
+    cursor: pointer;
+}
+ul li ul li:hover > a{
+    background-color: #0099FF;
+    color: #FFFFFF;
+}
+ul li ul li ul li{
+    display: none;
+}
+
+ul li ul li ul{
+    top: 0; /* Para deixar o sub-menu na mesma linha do menu pai */
+}
+ul li ul li:hover ul li{
+    display: block;
+    width: 130px;
+    left: 100%; /* Para deixar o sub-menu ao lado do menu pai */
+}
+
+
+/*
+Estilizando Inputs
+*/
+
+#input {
+    border: 1px #000000 solid;
+    width: 500px;
+    height: 35px;
+    border-radius: 1px;
+
+
+}
+
+.containerSlider {
+    max-width: 550px;
+    margin: auto;
+    
+}
+
+
+.containerGaleria {
+    margin: auto;
+    max-width: 870px;
+    height: auto;
+
+}
+
+#slides {
+    width: 640px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+p {
+    text-align: center;
+}
